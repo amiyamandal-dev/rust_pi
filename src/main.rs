@@ -17,9 +17,10 @@ fn main() -> Result<(), Box<dyn Error>> {
     loop {
         pin.set_high();
         println!("set pin high");
-        thread::sleep(Duration::from_millis(5000));
+        thread::sleep(Duration::from_millis(500));
         println!("set pin low");
         pin.set_low();
+        thread::sleep(Duration::from_millis(500));
     }
 
     Ok(())
